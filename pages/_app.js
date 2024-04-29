@@ -3,7 +3,7 @@ import { darkTheme } from '@rainbow-me/rainbowkit';
 import { getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
-import {  bscTestnet } from 'wagmi/chains';
+import {  bscTestnet,  } from 'wagmi/chains';
 import {
   RainbowKitProvider,
   connectorsForWallets,
@@ -60,8 +60,35 @@ import { DataProvider } from '@/context/DataContext';
     testnet: true,
   };
 
+   const scrollSepolia = {
+  id: 534_351,
+  name: 'Scroll Sepolia',
+  network: 'scroll-sepolia',
+  nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ['https://sepolia-rpc.scroll.io'],
+    },
+    public: {
+      http: ['https://sepolia-rpc.scroll.io'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Blockscout',
+      url: 'https://sepolia-blockscout.scroll.io',
+    },
+  },
+  contracts: {
+    multicall3: {
+      address: '0xca11bde05977b3631167028862be2a173976ca11',
+      blockCreated: 9473,
+    },
+  },
+  testnet: true,
+}
 const { provider, chains } = configureChains(
-  [bscTestnet,opBNBTestnet,GreenfieldTestnet],
+  [bscTestnet,opBNBTestnet,GreenfieldTestnet,scrollSepolia],
   [
     jsonRpcProvider({
       rpc: (chain) => ({ http: chain.rpcUrls.default.http[0] }),
@@ -78,7 +105,7 @@ const connectors = connectorsForWallets([
       injectedWallet({ chains }),
       rainbowWallet({ projectId, chains }),
       metaMaskWallet({ projectId, chains }),
-      coinbaseWallet({ chains, appName: 'xPromptNFT' }),
+      coinbaseWallet({ chains, appName: 'ActiveNFT' }),
       walletConnectWallet({ projectId, chains }),
     ],
   },

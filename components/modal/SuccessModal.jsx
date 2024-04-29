@@ -58,9 +58,9 @@ const SuccessModal = ({ txHash, openMintModal, handleOnClose }) => {
                     >
                       <a
                         target="_blank"
-                        href={'https://testnet.bscscan.com/tx/' + txHash}
+                        href={'https://sepolia.scrollscan.com/tx/' + txHash}
                       >
-                        Confirm on BSC Scan
+                        Confirm on Scroll scan
                       </a>
                     </button>
                     &nbsp;&nbsp;&nbsp;

@@ -37,7 +37,7 @@ const CreateForm = () => {
     setOpenModal(false);
   };
 
-  const apiKeys = process.env.NEXT_PUBLIC_NFTSTORAGE_TOKEN;
+  const apiKeys = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDBEMjMwYjc1Yjk0NGUwMTRkRmEwNGZGNDM5RDYyMTYyYTA4ZUFkNmIiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY3NzkxNTIxNTc2NywibmFtZSI6IkZUTS1BYXRhciJ9.6Xri1hUgf1esd02p8566ASZcBZqa9PgYY3GMTrObi-s"//process.env.NEXT_PUBLIC_NFTSTORAGE_TOKEN;
 
   const CreateNFT = async (e) => {
     e.preventDefault();
@@ -122,7 +122,7 @@ const CreateForm = () => {
       setMaxSupply('');
       setNftPrice('');
     } catch (error) {
-      console.log(error);
+      console.log("error ==========>>>>>>>>",error);
     }
   };
 

@@ -141,7 +141,7 @@ const ListNftModal = ({
                       <div className="mt-4 flex gap-2 w-full text-center items-center justify-center">
                         <form className=" rounded max-w-sm mx-auto">
                           <label className="text-gray-300 align-start flex mb-2">
-                            Set Price(in tBNB):
+                            Set Price:
                           </label>
                           <input
                             type="number"

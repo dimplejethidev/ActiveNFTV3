@@ -16,7 +16,7 @@ import {  bscTestnet } from 'wagmi/chains';
 const Explore = () => {
   const [listedNFTs, setListedNFTs] = useState([]);
   const chainName = 'bscTestnet';
-  const API_URL = `https://testnets-api.opensea.io/v2/chain/${chainName}/contract/${config.xpromptV3}/nfts`;
+  const API_URL = `https://testnets-api.opensea.io/v2/chain/${chainName}/contract/0x74c9edBe1f78De461F78957ceFeCb210849b38BA/nfts`;
   const apiKey = '474531d79fc84739a3b03950c9430bda';
 
   const fetchData = async () => {

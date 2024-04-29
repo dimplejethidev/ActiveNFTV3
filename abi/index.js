@@ -1,6 +1,12 @@
-const config = {
-  xpromptV3: '0x74c9edBe1f78De461F78957ceFeCb210849b38BA',
-  xPromptMarketplace: '0x2839A137EA0B4c29DF7E77Fc5Bed40637eb397f0',
+// const config = {
+//   xpromptV3: '0x74c9edBe1f78De461F78957ceFeCb210849b38BA',
+//   xPromptMarketplace: '0x2839A137EA0B4c29DF7E77Fc5Bed40637eb397f0',
+// };
+
+//scroll sepolia
+const config = { 
+  xpromptV3: '0xa8A2EaBf89E80FB181fF6C7f9a982d4Cc1eAa406',
+  xPromptMarketplace: '0xd6f4ae28c7ed31b67759113337f8694a1ca1a36a',
 };
 
 module.exports = { config };

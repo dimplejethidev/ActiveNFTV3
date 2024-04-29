@@ -26,7 +26,7 @@ export const FormProvider = ({ children }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsGenerating(true);
-    const token = process.env.NEXT_PUBLIC_SD_API_KEY;
+    const token = "sk-JUJayzkxkcBXHe12CdofYcDNpuIyjUlNjVLtjd6X81d72yA0";
     const modelId = 'stable-diffusion-xl-beta-v2-2-2'; // chosen model id
     const apiHost = 'https://api.stability.ai';
 
@@ -52,10 +52,10 @@ export const FormProvider = ({ children }) => {
           ],
           cfg_scale: 7,
           clip_guidance_preset: 'FAST_BLUE',
-          height: 512,
-          width: 512,
+          height: 256,
+          width: 256,
           samples: 1,
-          steps: 150,
+          steps: 50,
           style_preset: 'cinematic',
         }),
       });
