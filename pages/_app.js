@@ -88,7 +88,7 @@ import { DataProvider } from '@/context/DataContext';
   testnet: true,
 }
 const { provider, chains } = configureChains(
-  [bscTestnet,opBNBTestnet,GreenfieldTestnet,scrollSepolia],
+  [scrollSepolia],
   [
     jsonRpcProvider({
       rpc: (chain) => ({ http: chain.rpcUrls.default.http[0] }),

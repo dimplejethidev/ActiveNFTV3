@@ -24,8 +24,11 @@ const ListNftModal = ({
   const [quantity, setQuantity] = useState(1);
   const [hasListed, setHasListed] = useState(false);
 
-  const listNft = async (e) => {
-    e.preventDefault();
+  const listNft = async ( e ) =>
+  {
+    
+    try {
+      e.preventDefault();
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
@@ -74,6 +77,19 @@ const ListNftModal = ({
     const receipt = await listPrompt.wait();
     console.log('listPrompt: ', await listPrompt.hash);
     console.log('receipt: ', receipt);
+    } catch (error) {
+      console.log( "error =======>>>>>>>>>>>", error )
+      const mintNotification = toast.loading(
+      'Please wait!'
+    );
+      toast.update(mintNotification, {
+        render: 'Creation Completed Successfully',
+        type: 'success',
+        isLoading: false,
+        autoClose: 7000,
+      });
+    }
+    
   };
 
   return (

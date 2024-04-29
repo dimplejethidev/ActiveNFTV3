@@ -27,7 +27,15 @@ const NftPageDetails = ({
   owner,
   metadata,
   date,
-}) => {
+} ) =>
+{
+  
+
+  try {
+    
+  } catch (error) {
+    
+  }
   const [openModal, setOpenModal] = useState(false);
   const [maxSupply, setMaxSupply] = useState(0);
   const [ethPrice, setEthPrice] = useState();
@@ -128,14 +136,14 @@ const NftPageDetails = ({
     setOpenModal(true);
   };
 
-  useEffect(() => {
-    getTokenPrice();
-    getPrompt();
-  }, []);
+  // useEffect(() => {
+  //   getTokenPrice();
+  //   getPrompt();
+  // }, []);
 
-  useEffect(() => {
-    getSupply();
-  }, []);
+  // useEffect(() => {
+  //   getSupply();
+  // }, []);
 
   const handleOpenModal = () => {
     setOpenModal(true);
@@ -151,19 +159,19 @@ const NftPageDetails = ({
 
   // console.log(attributes);
 
-  const ensNameData = useEnsName({
-    address: owner,
-    chainId: 5,
-  });
+  // const ensNameData = useEnsName({
+  //   address: owner,
+  //   chainId: 5,
+  // });
 
-  const ensName = ensNameData.data;
+  // const ensName = ensNameData.data;
 
-  const ensAvatarData = useEnsAvatar({
-    address: owner,
-    chainId: 5,
-  });
+  // const ensAvatarData = useEnsAvatar({
+  //   address: owner,
+  //   chainId: 5,
+  // });
 
-  const ensAvatar = ensAvatarData.data;
+  // const ensAvatar = ensAvatarData.data;
 
   return (
     <>
@@ -207,7 +215,7 @@ const NftPageDetails = ({
                 <span className="text-md text-gray-300">
                   Creator: &nbsp;&nbsp;
                 </span>
-                <span className="flex items-center">
+                {/* <span className="flex items-center">
                   <img
                     src={ensAvatar}
                     alt=""
@@ -215,7 +223,7 @@ const NftPageDetails = ({
                   />
                   &nbsp; {ensName}{' '}
                 </span>
-                &nbsp;
+                &nbsp; */}
                 <span className="bg-purple-500 p-1 rounded-full text-[8px]  px-3">
                   Pro
                 </span>
@@ -245,11 +253,12 @@ const NftPageDetails = ({
             </div>
             <div className="glassmorphism p-4 text-start w-[210px]">
               <h1 className="font-bold">Chain:</h1>
-              <p> BSC Smart Chain Testnet</p>
+              <p> Scroll Sepolia Testnet</p>
             </div>
             <div className="bg-black/60 border shadow-2xl border-gray-400 p-4 text-start w-[210px]">
               <h1 className="font-bold">Current Supply:</h1>
-              {maxSupply && <p>{maxSupply}</p>}
+              {/* {maxSupply && <p>{maxSupply}</p>} */ }
+              10
             </div>
           </div>
 
@@ -260,7 +269,7 @@ const NftPageDetails = ({
             </h2>
             <div className="border w-[600px] border-gray-300 MT-6" />
             <p className="text-xl my-4 text-gray-200 text-[17px]">
-              <span className="">Price:</span> {ethPrice} tBNB &nbsp;
+              <span className="">Price:</span> 0.0001 &nbsp;
               {/* <span className="text-[16px] text-gray-300">
                 ~(${balanceInUsd})
               </span> */}

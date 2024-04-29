@@ -36,7 +36,7 @@ const SSXComponent = () => {
   return (
     <div className="text-white">
       <h2 className="text-white">User Authorization Module</h2>
-      <p>Authenticate and Authorize using your tBNB keys</p>
+      <p>Authenticate and Authorize using your keys</p>
       <br></br>
       {ssxProvider ? (
         <>

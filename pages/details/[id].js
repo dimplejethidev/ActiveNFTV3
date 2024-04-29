@@ -10,7 +10,7 @@ const NftDetails = () => {
   const { id } = router.query;
   const [result, setResult] = useState(null);
   const chainName = 'bscTestnet';
-  const API_URL = `https://testnets-api.opensea.io/v2/chain/${chainName}/contract/${config.xpromptV3}/nfts/${id}`;
+  const API_URL = `https://testnets-api.opensea.io/v2/chain/${chainName}/contract/0x74c9edBe1f78De461F78957ceFeCb210849b38BA/nfts/${id}`;
 
   const fetchData = async (nftId) => {
     try {
